@@ -1,0 +1,17 @@
+[project]
+name = "commodities-data-warehouse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.2",
+    "sqlalchemy>=2.0.34",
+    "python-dotenv>=1.0.1",
+    "psycopg2-binary>=2.9.9",
+    "yfinance>=0.2.43",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
