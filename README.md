@@ -2,14 +2,14 @@
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Extract: search_all_commodities]
-    B --> C[Transform: search_commodities]
-    C --> D[Transform: Concatenate Data]
-    D --> E[Load: save_data]
-    E --> F[End]
+    A[Início] --> B[Extrair: search_all_commodities]
+    B --> C[Transformar: search_commodities]
+    C --> D[Transformar: Concatenar Dados]
+    D --> E[Carregar: save_data]
+    E --> F[Fim]
 
-    %% Define the links between the elements
-    B -->|Extract Data| C
-    C -->|Transform Data| D
-    D -->|Load Data| E
+    %% Definir os links entre os elementos
+    B -->|Extrair Dados| C
+    C -->|Transformar Dados| D
+    D -->|Carregar Dados| E
 ```
