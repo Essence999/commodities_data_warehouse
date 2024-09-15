@@ -1,0 +1,12 @@
+datawarehouse:
+  target: dev
+  outputs:
+    dev:
+      dbname: "{{ env_var('DB_NAME_PROD') }}"
+      host: "{{ env_var('DB_HOST_PROD') }}"
+      pass: "{{ env_var('DB_PASSWORD_PROD') }}"
+      port: "{{ env_var('DB_PORT_PROD') | int }}"
+      schema: "{{ env_var('DB_SCHEMA_PROD') }}"
+      threads: "{{ env_var('DB_THREADS_PROD') | int}}"
+      type: "{{ env_var('DB_TYPE_PROD') }}"
+      user: "{{ env_var('DB_USER_PROD') }}"
