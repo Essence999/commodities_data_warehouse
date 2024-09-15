@@ -1,5 +1,6 @@
 # Workflow
 
+```mermaid
 flowchart TD
     A[Start] --> B[Extract Data]
     B --> C{For each commodity}
@@ -16,3 +17,4 @@ flowchart TD
     E -->|Transformed Data| F
     F -->|Data| G
     G -->|Load Data| H
+```
