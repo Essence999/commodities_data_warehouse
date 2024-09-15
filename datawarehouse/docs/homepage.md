@@ -51,7 +51,7 @@ Os models definem as transformações de dados usando SQL. Eles são divididos e
 A camada de staging é responsável por preparar e limpar os dados antes que eles sejam carregados nas tabelas finais de análise.
 
 - __stg_commodities.sql__: Trata e formata os dados das commodities extraídos da API.
-- __stg_movimentacao_commodities.sql__: Trata e formata os dados de movimentações das commodities.
+- __stg_commodities_moviment.sql__: Trata e formata os dados de movimentações das commodities.
 
 #### Datamart
 
@@ -73,11 +73,11 @@ Os snapshots são utilizados para manter um histórico de como os dados mudam ao
 ├── models
 │   ├── staging
 │   │   ├── stg_commodities.sql
-│   │   └── stg_movimentacao_commodities.sql
+│   │   └── stg_commodities_moviment.sql
 │   └── datamart
 │       └── dm_commodities.sql
 ├── seeds
-│   └── movimentacao_commodities.csv
+│   └── commodities_moviment.csv
 ├── dbt_project.yml
 └── README.md
 ```
@@ -86,7 +86,7 @@ Os snapshots são utilizados para manter um histórico de como os dados mudam ao
 
 ### Requisitos
 
-- Python 3.7+
+- Python 3.11+
 - DBT
 
 ### Passos para Execução
