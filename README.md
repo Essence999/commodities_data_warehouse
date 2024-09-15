@@ -1,15 +1,15 @@
 # Workflow
 
 ```mermaid
-flowchart TD
-    A[Início] --> B[Extrair: search_all_commodities]
-    B --> C[Transformar: search_commodities]
-    C --> D[Transformar: Concatenar Dados]
-    D --> E[Carregar: save_data]
+graph TD
+    A[Início] --> B[Obter Dados das Commodities]
+    B --> C[Buscar Dados de Cada Commodity]
+    C --> D[Consolidar Dados]
+    D --> E[Salvar Dados na Tabela]
     E --> F[Fim]
 
-    %% Definir os links entre os elementos
-    B -->|Extrair Dados| C
-    C -->|Transformar Dados| D
-    D -->|Carregar Dados| E
+    %% Detalhamento das etapas
+    B --> |"Chama search_all_commodities"| C
+    C --> |"Chama search_commodities"| D
+    D --> |"Chama save_data"| E
 ```
