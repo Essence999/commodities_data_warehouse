@@ -21,7 +21,7 @@ engine = create_engine(DATABASE_URL)
 
 def get_data():
     query = '''
-    SELECT data, symbol, close_value, action, quantity, valor, ganho
+    SELECT date, symbol, close_value, action, quantity, valor, ganho
     FROM public.dm_commodities
     '''
 
