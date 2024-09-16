@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine
-from sqlalchemy.exc import ProgrammingError
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -29,6 +28,18 @@ def get_data():
     return data
 
 
+# Configurar a página do Streamlit
+st.set_page_config(page_title='Dashboard do diretor', layout='wide')
+
+# Título do Dashboard
+st.title('Dashboard de Commodities')
+
+# Descrição
+st.write("""
+Este dashboard mostra os dados de commodities e suas transações.
+""")
+
+# Obter os dados
 df = get_data()
 
 st.dataframe(df)
