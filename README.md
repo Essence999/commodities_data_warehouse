@@ -1,6 +1,6 @@
 # Commodities Data Warehouse
 
-Este projeto é uma **Data Warehouse de commodities** que utiliza a API do [Yahoo Finance](https://pypi.org/project/yfinance/) para extrair dados, armazená-los em um banco de dados PostgreSQL hospedado no [Render](https://render.com/) e realizar transformações utilizando o [DBT](https://docs.getdbt.com/). O objetivo é construir um pipeline de ETL (Extract, Transform, Load) para a análise de dados de commodities.
+Este projeto é uma [**Data Warehouse de commodities**](https://www.youtube.com/watch?v=n3R0c2ZB6BQ) que utiliza a API do [Yahoo Finance](https://pypi.org/project/yfinance/) para extrair dados, armazená-los em um banco de dados PostgreSQL hospedado no [Render](https://render.com/) e realizar transformações utilizando o [DBT](https://docs.getdbt.com/). O objetivo é construir um pipeline de ETL (Extract, Transform, Load) para a análise de dados de commodities.
 
 ## Índice
 
