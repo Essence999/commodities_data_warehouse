@@ -135,23 +135,41 @@ graph TD
 A estrutura de pastas do projeto é organizada da seguinte forma:
 
 ```plaintext
-├── models
-│   ├── staging
-│   │   ├── stg_commodities.sql
-│   │   └── stg_movimentacao_commodities.sql
-│   └── datamart
-│       └── dm_commodities.sql
-├── seeds
-│   └── commodities_moviment.csv
-├── dbt_project.yml
-├── extract_data.py
+├── .gitignore
+├── .user.yml
+├── README.md
+├── app
+│   └── app.py
+├── datawarehouse
+│   ├── .gitignore
+│   ├── README.md
+│   ├── dbt_project.yml
+│   ├── docs
+│   │   └── homepage.md
+│   ├── models
+│   │   ├── datamart
+│   │   │   ├── dm_commodities.sql
+│   │   │   └── schema.yml
+│   │   ├── staging
+│   │   │   ├── stg_commodities.sql
+│   │   │   ├── stg_commodities_moviment.sql
+│   │   │   └── schema.yml
+│   │   └── schema.yml
+│   ├── seeds
+│   │   ├── .gitkeep
+│   │   └── commodities_moviment.csv
+├── example.env
+├── profiles.yml
 ├── pyproject.toml
-└── README.md
+├── src
+│   └── commodities_data_warehouse
+│       └── extract_data.py
+└── uv.lock
 ```
 
 ### Diretórios Principais
 
-**models**: Contém os arquivos SQL do DBT que definem as transformações dos dados.
-**seeds**: Armazena arquivos CSV de dados estáticos que são carregados como seeds no PostgreSQL.
-**extract_data.py**: Script que extrai dados de commodities da API yfinance.
-**app/app.py**: Script para visualizar os dados com streamlit.
+1. **`models`**: Contém os arquivos SQL do DBT que definem as transformações dos dados.
+2. **`seeds`**: Armazena arquivos CSV de dados estáticos que são carregados como seeds no PostgreSQL.
+3. **`extract_data.py`**: Script que extrai dados de commodities da API yfinance.
+4. **`app.py`**: Script para visualizar os dados com streamlit.
