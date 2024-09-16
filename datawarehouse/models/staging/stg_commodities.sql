@@ -5,7 +5,7 @@ from {{ source('dbwarehouse_wlm7', 'commodities') }}
 ),
 
 renamed as (
-    select cast("date" as date) as data, "Close" as close_value, symbol
+    select cast("date" as date) as date, "Close" as close_value, symbol
     from source
     )
 

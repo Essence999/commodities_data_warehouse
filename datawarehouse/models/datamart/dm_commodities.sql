@@ -1,6 +1,6 @@
 with commodities as (
     select
-        data,
+        date,
         symbol,
         cast(close_value as double precision) as close_value
     from 
@@ -19,7 +19,7 @@ movimentacao as (
 
 joined as (
     select
-        c.data,
+        c.date,
         c.symbol,
         c.close_value,
         m.action,
@@ -34,13 +34,13 @@ joined as (
     inner join
         movimentacao m
     on
-        c.data = m.date
+        c.date = m.date
         and c.symbol = m.symbol
 ),
 
 last_day as (
     select
-        max(data) as max_date
+        max(date) as max_date
     from
         joined
 ),
@@ -51,11 +51,11 @@ filtered as (
     from
         joined
     where
-        data = (select max_date from last_day)
+        date = (select max_date from last_day)
 )
 
 select
-    data,
+    date,
     symbol,
     close_value,
     action,

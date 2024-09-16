@@ -6,13 +6,13 @@ models:
     columns:
       - name: date
         description: "Data da observação"
-      - name: simbolo
+      - name: symbol
         description: "Símbolo da commodity"
       - name: close_value
         description: "Preço de fechamento da commodity"
-      - name: acao
+      - name: action
         description: "Tipo de transação (buy/sell)"
-      - name: quantidade
+      - name: quantity
         description: "Quantidade transacionada"
       - name: valor
         description: "Valor da transação"

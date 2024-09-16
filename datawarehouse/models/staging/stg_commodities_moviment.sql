@@ -10,10 +10,10 @@ with source as (
 
 renamed as (
     select
-        cast(date as date),
+        cast(date as date) as date,
         symbol,
         action,
-        quantity
+        cast(quantity as int) as quantity
     from source
 )
 

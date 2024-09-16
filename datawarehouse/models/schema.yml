@@ -11,7 +11,7 @@ sources:
             description: "Data da observação"
           - name: Close
             description: "Preço de fechamento da commodity"
-          - name: simbolo
+          - name: symbol
             description: "Símbolo da commodity"
 
       - name: commodities_moviment
